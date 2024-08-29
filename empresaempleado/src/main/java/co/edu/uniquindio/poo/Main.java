@@ -67,6 +67,7 @@ public class Main {
         Gerente gerente = new Gerente(nombre, idEmpleado, departamento);
         empresa.agregarEmpleado(gerente);
         departamento.agregarEmpleado(gerente);
+        scanner.close();
     }
 
     private static void agregarTecnico(Empresa empresa) {
@@ -81,6 +82,7 @@ public class Main {
         Tecnico tecnico = new Tecnico(nombre, idEmpleado, departamento);
         empresa.agregarEmpleado(tecnico);
         departamento.agregarEmpleado(tecnico);
+        scanner.close();
     }
 
     private static Departamento buscarOcrearDepartamento(Empresa empresa, String departamentoNombre) {
@@ -107,6 +109,7 @@ public class Main {
         String codigo = "DEP" + (empresa.getDepartamentos().size() + 1);
         Departamento departamento = new Departamento(nombre, codigo);
         empresa.agregarDepartamento(departamento);
+        scanner.close();
     }
 
     private static void agregarProyecto(Empresa empresa) {
@@ -116,5 +119,6 @@ public class Main {
         String codigo = "PROY" + (empresa.getProyectos().size() + 1);
         Proyecto proyecto = new Proyecto(nombre, codigo);
         empresa.agregarProyecto(proyecto);
+        scanner.close();
     }
 }
